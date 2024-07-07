@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./assets/logo.png" alt="alura">
+    </header>
+    <main>
+        <div>
+            <textarea class="main__input" id="textToEncrypt" placeholder="Ingrese el texto a encriptar aqui"></textarea>
+        </div>
+        <div>
+            <p>Solo letras minusculas y sin acentos</p>
+            <div class="main__buttons">
+                <button type="button" id="encrypt">Encriptar</button>
+                <button type="button" id="decrypt">Desencriptar</button>
+            </div>
+        </div>
+    </main>
+    <aside>
+            <div class="aside__display--empty">
+                <img src="./assets/notfound.png" alt="">
+                <div class="text">
+                    <p><strong>Ningún mensaje fue encontrado</strong></p>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+            <div class="aside__display--content hide">
+                <p id="textEncrypted"></p>
+                <button type="button" id="copy">Copiar</button>
+            </div>
+    </aside>
+    <script src="index.js"></script>
+</body>
+</html>
