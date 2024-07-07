@@ -8,25 +8,25 @@ const btnCopy = document.getElementById('copy')
 
 const encryptText = () => {
     let text = textToEncrypt.value
-    if (text === "") console.log('error')
-
-    // La letra "e" es convertida para "enter"
-    // La letra "i" es convertida para "imes"
-    // La letra "a" es convertida para "ai"
-    // La letra "o" es convertida para "ober"
-    // La letra "u" es convertida para "ufat"
-    asideEmpty.classList.add("hide")
-    asideContent.classList.remove("hide")
-    textEncrypted.innerText = text.toLowerCase().replaceAll("e", "enter").replaceAll('i', 'imes').replaceAll("a", "ai").replaceAll("o", 'ober').replaceAll("u", 'ufat')
-    textToEncrypt.value = ""
+    if (text === "") {
+        return
+    } else {
+        asideEmpty.classList.add("hide")
+        asideContent.classList.remove("hide")
+        textEncrypted.innerText = text.toLowerCase().replaceAll("e", "enter").replaceAll('i', 'imes').replaceAll("a", "ai").replaceAll("o", 'ober').replaceAll("u", 'ufat')
+        textToEncrypt.value = ""
+    }
 }
 const decryptText = () => {
     let text = textToEncrypt.value
-    if (text === "") console.log('error')
-    asideEmpty.classList.add("hide")
-    asideContent.classList.remove("hide")
-    textEncrypted.innerText = text.toLowerCase().replaceAll("enter", "e").replaceAll('imes', 'i').replaceAll("ai", "a").replaceAll("ober", "o").replaceAll('ufat', "u")
-    textToEncrypt.value = ""
+    if (text === "") {
+        return
+    } else {
+        asideEmpty.classList.add("hide")
+        asideContent.classList.remove("hide")
+        textEncrypted.innerText = text.toLowerCase().replaceAll("enter", "e").replaceAll('imes', 'i').replaceAll("ai", "a").replaceAll("ober", "o").replaceAll('ufat', "u")
+        textToEncrypt.value = ""
+    }
 }
 const copyContent = async () => {
     try {
